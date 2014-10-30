@@ -1,0 +1,95 @@
+
+/* root element for hometabs  */
+ul.hometabs {
+    list-style:none;
+    margin:0 !important;
+    padding:0;
+    border-bottom:1px solid #eeeeee;
+    height:30px;
+}
+
+/* single tab */
+ul.hometabs li {
+    float:left;
+    text-indent:0;
+    padding:0;
+    margin:0 !important;
+    list-style-image:none !important;
+	border-right:solid 1px #FFFFFF
+}
+
+/* link inside the tab. uses a background image */
+ul.hometabs a {
+/*    background: url(/media/img/hometabs/blue.png) no-repeat -420px 0;*/
+background-color:#eeeeee;
+    font-size:12px;
+    display:block;
+    height: 30px;
+    line-height:30px;
+    /*width: 134px;*/
+    text-align:center;
+    text-decoration:none;
+    padding:0px 20px;
+    margin:0px;
+    position:relative;
+    top:1px;
+	color:#757575;
+}
+
+ul.hometabs a:active {
+    outline:none;
+	color:#757575 !important;
+}
+
+/* when mouse enters the tab move the background image */
+ul.hometabs a:hover {
+    background-position: -420px -31px;
+    color:#333;
+	 padding:0px 20px;
+}
+
+/* active tab uses a class name "current". its highlight is also done by moving the background image. */
+ul.hometabs a.current, ul.hometabs a.current:hover, ul.hometabs li.current a {
+   /* background-position: -420px -62px;*/
+   background-color:#FFFFFF; border:solid 1px #eeeeee; border-bottom:none;
+   
+    cursor:default !important;
+    color:#333 !important;
+}
+
+/* Different widths for hometabs: use a class name: w1, w2, w3 or w2 */
+
+
+/* width 1 */
+ul.hometabs a.s { background-position: -553px 0; width:81px; }
+ul.hometabs a.s:hover { background-position: -553px -31px; }
+ul.hometabs a.s.current  { background-position: -553px -62px; }
+
+/* width 2 */
+ul.hometabs a.l { background-position: -248px -0px; width:174px; }
+ul.hometabs a.l:hover { background-position: -248px -31px; }
+ul.hometabs a.l.current { background-position: -248px -62px; }
+
+
+/* width 3 */
+ul.hometabs a.xl { background-position: 0 -0px; width:248px; }
+ul.hometabs a.xl:hover { background-position: 0 -31px; }
+ul.hometabs a.xl.current { background-position: 0 -62px; }
+
+
+/* initially all panes are hidden */
+.panes .pane {
+    display:none;
+}
+
+/* tab pane styling */
+.panes div {
+    display:none;
+    padding:15px 20px;
+    border:1px solid #eeeeee;
+    border-top:0;
+    /*height:100px;*/
+	height:100%;
+    font-size:12px;
+    background-color:#fff;
+}
